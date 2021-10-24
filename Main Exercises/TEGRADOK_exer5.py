@@ -1,13 +1,41 @@
+'''
+Exercise 5: Dictionaries
 
+CMSC 12 | Course
+
+Submitted to:
+Professor Aragones
+
+Submitted by:
+TEGRADO, Kenneth Renz A.
+'''
+
+'''
+The purpose of the program is to create an application that can hold records of fitness club members.
+
+Our application should be able to do the following:
+> Add a member record
+> View a member record initially placed in the program
+> View all member records of all recorded members in the program
+> Edit a member record wherein updating weight will update BMI & Type and height should not be editable
+> Delete a member record using a member id as the key
+> Delete all member records will delete all data of the program
+> Exit to close the program
+'''
 
 # All functions used by the program
-def menu():
+def menu(): #define a function named menu but there's no need to set an input parameter
+    #use this function to show the menu that will prompt all the functions of the program
+    #this function will also allow user to choose a function that they want to utilize from the program
     print("Options:\n [1]Add a member\n [2]View a member record\n [3]View all members\n [4]Edit member record\n [5]Delete a member record\n [6]Delete all member records\n [0]Exit ") 
-    #print a statement to show the operations available
+    #use print() function to show all the options available for the program
     choice = input("Enter your choice: ") #ask for user input using input() function 
-    return choice   
+    #store the user's choice of function in the choice variable
+    return choice #return the value of the choice variable to the main program  
 
-def idGenerator(dict):
+def idGenerator(dict): #define a function named idGenerator and set one input paramater to a dict
+    #use this function to generate an id for a user
+    #use the dict parameter to check a dictionary
     members = len(dict)
     newIdNumber = members + 1
     if 1000 > newIdNumber >= 100:
