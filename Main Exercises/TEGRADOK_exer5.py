@@ -40,15 +40,36 @@ def menu():  # define a function named menu but there's no need to set an input 
 def idGenerator(dict):  # define a function named idGenerator and set one input paramater to a dict
     # use this function to generate an id for a user
     # use the dict parameter to check a dictionary
+    # check if the dict contains an item using the len() function
+    # the number of items inside the dict parameter indicates the number of members inside the database
     members = len(dict)
-    newIdNumber = members + 1
-    if 1000 > newIdNumber >= 100:
-        id = "M" + str(newIdNumber)
-    elif 100 > newIdNumber >= 10:
-        id = "M0" + str(newIdNumber)
-    elif 10 > newIdNumber > 0:
-        id = "M00" + str(newIdNumber)
-    return id
+    if members == 0:  # condition to check if there aren't any member inside the database
+        # if there are no members inside the database then do the this
+        id = 'M0001'  # create a variable id then set the value to the string M0001
+    else:  # if the database has any members then do this condition
+        # create a lastElement variable that will store the key of the last item inside the dict parameter
+        # store all the keys of the dict parameter in a list using the last() function
+        # then use indexing to make the last key be stored inside the lastElement variable
+        lastElement = list(dict.keys())[-1]
+        idNum = ''  # create an empty string variable named idNum that will store the number key of the last member placed on the database
+        for char in lastElement:  # iterate every character of the lastElement variable
+            if char.isnumeric():  # condition to check if a character iterated is a numeric character
+                idNum += char  # concatenate the character to the idNum variable
+
+        # create newIdNumber variable that will be used to store the new id number allocated for the new member inside the database
+        # add one to the value of the idNumber to so that it will indicate that there's a new number succeeding the previous id number
+        # use the int() function to convert a string to an integer
+        newIdNumber = int(idNum) + 1
+        if 1000 > newIdNumber >= 100:  # condition to check if the new id number is greater than or equal to 100 or less than 1000
+            # set the value of id to this string format
+            id = "M" + str(newIdNumber)
+        elif 100 > newIdNumber >= 10:  # condtion to check if the new id number is greater than or equal to 10 but less than 100
+            # set the value of id to this string format if this condition is met
+            id = "M0" + str(newIdNumber)
+        elif 10 > newIdNumber > 0:  # condition to check if the new id number is greater than 0 but less than 10
+            # set the value of the id variable to this string format if this condition is met
+            id = "M00" + str(newIdNumber)
+    return id  # return the value of the id variable back to the main program using the return method
 
 
 def bmi(weight, height):  # define a user function named BMI and set two input parameters
