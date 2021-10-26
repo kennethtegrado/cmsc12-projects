@@ -45,7 +45,7 @@ def idGenerator(dict):  # define a function named idGenerator and set one input 
     members = len(dict)
     if members == 0:  # condition to check if there aren't any member inside the database
         # if there are no members inside the database then do the this
-        id = 'M0001'  # create a variable id then set the value to the string M0001
+        id = 'M001'  # create a variable id then set the value to the string M0001
     else:  # if the database has any members then do this condition
         # create a lastElement variable that will store the key of the last item inside the dict parameter
         # store all the keys of the dict parameter in a list using the last() function
@@ -85,7 +85,7 @@ def bmi(weight, height):  # define a user function named BMI and set two input p
         # a bmi of less than 18.5 is considered underweight
     elif 18.5 <= bmi <= 24.9:  # another condition to check if the bmi of the person is greater than or equal to 18.5 but less than or equal to 24.9
         # if the condition above is true then do this
-        index = "Healthy"  # set the value of the index variable to Healthy
+        index = "Normal"  # set the value of the index variable to Healthy
         # base on the BMI index, a bmi between 18.5 and 24.9 is a healthy bmi
     elif 25 <= bmi <= 29.9:  # another condition to check if the bmi of the person is greater than or equal to 25 but less than or equal to 29.9
         # if the condition is true then do this
@@ -130,18 +130,18 @@ def viewMem(dict):  # define a new user funciton named viewMem then set the inpu
     record = ''  # create an empty string that will use the elements inside the dict parameter and transform it to a variable that can be easily understood
     # ask the user what is the id of the member that he is going to check using the input() function
     id = input("Enter member ID: ")
-    # unparse the data of the element at the dict with the key id
-    # strictly follow the format of unparsing the values using the variables below because that is the order of the data inside the dict parameter
-    name, weight, height, bmiInfo = dict[id]
     if id in dict:  # condition to check if the id placed by the user is inside the dict parameter
         # if the is in their then
+        # unparse the data of the element at the dict with the key id
+        # strictly follow the format of unparsing the values using the variables below because that is the order of the data inside the dict parameter
+        name, weight, height, bmiInfo = dict[id]
         # concatenate this string to the value of the record
         record += "=== Member Information ===\n"
         # using the f function set the the formatting to the provided string
         record += f'({id}) - {name} {weight} kg {height} cm (BMI: {bmiInfo[0]}; {bmiInfo[1]})\n'
     else:  # if the id is not in the dict parameter then
         # concatenate this string to the record variable
-        record += 'Sorry, the record does not exist!'
+        record += 'Sorry, the record does not exist!\n'
     return record  # using the return method, give the value of the record variable back to the main program
 
 
@@ -211,7 +211,7 @@ def delAll(dict):  # define a new function named delAll then set the parameter t
 memberData = {}
 
 # print a prompt that informs the user that the program is now starting
-print("Welcome to Aubrey's Fitness Club")
+print("Welcome to Aubrey Simp's Fitness Club")
 
 while True:  # create an infinite loop that will continuously ask the user for a function until the loop is terminated
     choice = menu()  # call the menu() function to prompt all available functions of the program

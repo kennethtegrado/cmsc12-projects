@@ -49,7 +49,7 @@ def idGenerator(dict):  # define a function named idGenerator and set one input 
     members = len(dict)
     if members == 0:  # condition to check if there aren't any member inside the database
         # if there are no members inside the database then do the this
-        id = 'M0001'  # create a variable id then set the value to the string M0001
+        id = 'M001'  # create a variable id then set the value to the string M0001
     else:  # if the database has any members then do this condition
         # create a lastElement variable that will store the key of the last item inside the dict parameter
         # store all the keys of the dict parameter in a list using the last() function
@@ -89,7 +89,7 @@ def bmi(weight, height):  # define a user function named BMI and set two input p
         # a bmi of less than 18.5 is considered underweight
     elif 18.5 <= bmi <= 24.9:  # another condition to check if the bmi of the person is greater than or equal to 18.5 but less than or equal to 24.9
         # if the condition above is true then do this
-        index = "Healthy"  # set the value of the index variable to Healthy
+        index = "Normal"  # set the value of the index variable to Healthy
         # base on the BMI index, a bmi between 18.5 and 24.9 is a healthy bmi
     elif 25 <= bmi <= 29.9:  # another condition to check if the bmi of the person is greater than or equal to 25 but less than or equal to 29.9
         # if the condition is true then do this
