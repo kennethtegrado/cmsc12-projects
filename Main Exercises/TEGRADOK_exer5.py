@@ -157,7 +157,7 @@ def viewAll(dict):  # define a new user function named viewAll and set the param
             record += f'({id}) - {name} {weight} kg {height} cm (BMI: {bmiInfo[0]}; {bmiInfo[1]})\n'
     else:  # if the dict paramater is empty then do this condition
         # concatenate a string that says the record is empty to the record variable
-        record += 'Sorry, record is empty!'
+        record += 'Sorry, record is empty!\n'
     return record  # using the return method, give the value of the record variable back to the main program
 
 
@@ -190,11 +190,11 @@ def delMem(dict):  # define a new user function named delMem then set the input 
         # use the del method to delete an item from the dict parameter given the id as the key
         del dict[id]
         # print a prompt that says that the deleting process is a success
-        print(f'Member {id} successfully deleted.')
+        print(f'Member {id} successfully deleted.\n')
         return dict  # return the updated dict parameter back to the main program using the return method
     else:  # if the id is not in the database then follow this condition
         # print a prompt that says that the the user is not in the database
-        print('Sorry, the user is not in the database!')
+        print('Sorry, the user is not in the database!\n')
 
 
 def delAll(dict):  # define a new function named delAll then set the parameter to dict
@@ -240,12 +240,14 @@ while True:  # create an infinite loop that will continuously ask the user for a
     elif choice == "6":  # if the user chose 5 as their choice
         # call the delAll() user function to delete all the items inside the dictionary memberData
         delAll(memberData)
+        # print a prompt that informs the user that all data has been deleted
+        print("All data successfully deleted! \n")
     elif choice == "0":  # if the user chose 0 for their choice
         # print a prompt that thanks the user for using the program
-        print("Thank you for using the program!")
+        print("Thank you for using the program!\n")
         break  # break the loop
     else:  # if the user gave a choice not in the function specified the program then use this condition
         # print a prompt that says that it is an invalid choice
-        print("Invalid choice!")
+        print("Invalid choice!\n")
 
 # End of the program
