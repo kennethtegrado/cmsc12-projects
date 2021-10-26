@@ -251,7 +251,7 @@ def fileMaker(dict):  # define a new user function named fileMaker
 memberData = {}
 
 # print a prompt that informs the user that the program is now starting
-print("Welcome to Aubrey's Fitness Club")
+print("Welcome to Aubrey Simp's Fitness Club")
 
 while True:  # create an infinite loop that will continuously ask the user for a function until the loop is terminated
     choice = menu()  # call the menu() function to prompt all available functions of the program
@@ -280,6 +280,8 @@ while True:  # create an infinite loop that will continuously ask the user for a
     elif choice == "6":  # if the user chose 5 as their choice
         # call the delAll() user function to delete all the items inside the dictionary memberData
         delAll(memberData)
+        # print a prompt that informs the user that all data has been deleted
+        print("All data successfully deleted! \n")
     elif choice == "7":
         # call the fileMaker() function to save the current database to a txt file
         # this function will save all the data from the dictionary memberData to a .txt file named Gym
