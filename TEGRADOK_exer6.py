@@ -134,11 +134,11 @@ def viewMem(dict):  # define a new user funciton named viewMem then set the inpu
     record = ''  # create an empty string that will use the elements inside the dict parameter and transform it to a variable that can be easily understood
     # ask the user what is the id of the member that he is going to check using the input() function
     id = input("Enter member ID: ")
-    # unparse the data of the element at the dict with the key id
-    # strictly follow the format of unparsing the values using the variables below because that is the order of the data inside the dict parameter
-    name, weight, height, bmiInfo = dict[id]
     if id in dict:  # condition to check if the id placed by the user is inside the dict parameter
         # if the is in their then
+        # unparse the data of the element at the dict with the key id
+        # strictly follow the format of unparsing the values using the variables below because that is the order of the data inside the dict parameter
+        name, weight, height, bmiInfo = dict[id]
         # concatenate this string to the value of the record
         record += "=== Member Information ===\n"
         # using the f function set the the formatting to the provided string
@@ -217,11 +217,17 @@ def fileReader(dict):  # define a new user function named fileReader then set th
     for lines in file:  # use this loop to iterate on every lines on the file
         # use the .split() function to remove all the spaces in between words of the current line
         # at the same time, it will also convert all contents to a list that can easily be unparsed
-        line = lines.split()
+        # use the hash (#) symbol as a separator of texts in single line
+        # note that the data inside the texts are using the hash (#) symbol as the delimiter and we are just following that format
+        line = lines.split('#')
         # using indexing, unparse all the data from the current line of text using the format below
-        name, weight, height, bmi, classification = line[1:-1]
-        # store the bmi and classification variable on a tuple to since some parts of the program is coded to process a tuple for the bmiInfo
-        bmiInfo = (bmi, classification)
+        name, weight, height, bmi, classification = line[1:]
+        weight = float(weight)  # convert weight to a float object
+        height = float(height)  # convert height to a float object
+        # using the rstrip() function will remove the trailing ' \n' that accompanied our classification variable
+        newClassification = classification.rstrip(" \n")
+        # store the bmi and newClassification variable on a tuple to since some parts of the program is coded to process a tuple for the bmiInfo
+        bmiInfo = (bmi, newClassification)
         # then create a new item on the dictionary parameter with the key of line[0] with the value containing the variables below
         dict[line[0]] = [name, weight, height, bmiInfo]
     file.close()  # use the close() method to tell the program to close the file variable to avoid data loss
@@ -237,8 +243,10 @@ def fileMaker(dict):  # define a new user function named fileMaker
     for keys, values in dict.items():  # iterate every items inside the dict paramater
         # using the f'' method, write the following using this formatting so that the program can easily load the data later on
         # use the write() function to write a text on a .txt file
+        # use the hash (#) symbol as a delimiter between variables
+        # this will help us to easily split the texts later on
         file.write(
-            f'{keys} {values[0]} {values[1]} {values[2]} {values[3][0]} {values[3][1]} \n')
+            f'{keys}#{values[0]}#{values[1]}#{values[2]}#{values[3][0]}#{values[3][1]} \n')
     file.close()  # close the file variable using the close() function to stop loss of data
 
 
