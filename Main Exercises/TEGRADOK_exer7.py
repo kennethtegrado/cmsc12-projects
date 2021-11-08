@@ -32,34 +32,42 @@ def listMaker():  # define a new user function named listMaker
     # use this function to create two lists with the length based on the choice of the user
     # init length with the value based on the user input
     length = int(input("How many items to be placed in the list: "))
-    list1 = []  # init list1 with value of an empty list
-    list2 = []  # init list2 with value of an empty list
     if length > 0:
         print('\nEnter Contents for List 1')
-        for i in range(length):  # iterate in range of length times to create a list
-            # init element with value based on the user input
-            # use int() function to convert all elements to an int object
-            element = int(input('Enter number for List 1: '))
-            # append the value of element to the empty list1 to create a list with a sequence of elements
-            list1.append(element)
+        # init listOne with value equal to the object returned by the list1(function)
+        listOne = listFirst(length)
         print('\nEnter Contents for List 2')
-        for i in range(length):  # iterate in range of length times to create a list
-            # init element with value based on the user input
-            # use the int() function to convert all elements to an int object
-            element = int(input('Enter a number for List 2: '))
-            # append the value of element to the empty list2 to create a list with a sequence of elements
-            list2.append(element)
+        listTwo = listSecond(length)
         # return the value of list1 and list2 back to the main program inside a tuple for unparsing
-        return [list1, list2, length]
+        return [listOne, listTwo, length]
     else:
         print('\nNumber placed cannot be used as a basis for the lengths of the sequence of the two lists!\nPlease try again!\n')
 
 
-def list1(length):
-    if length <= 0:
+def listFirst(length):  # define a new user function named listFirst with length parameter
+    # use this recursive function to create a list object with a number of elements on a sequence based on the length parameter
+    if length <= 0:  # base case
+        # if length is less than or equal to 0 then return an empty list to recursive function
         return []
+    # init element with value equal to user input
     element = int(input('Enter a number for List 1: '))
-    return [element] + list1(length - 1)
+    return [element] + listFirst(length - 1)  # recursive case
+    # wrap the [element] in braces to create a list object
+    # use the + operator to concatenate the list returned by the recursive case
+    # deduct 1 to our length to init a recursive step
+
+
+def listSecond(length):  # define a new user function named listSecond with length parameter
+    # use this recursive function to create a list object with a number of elements on a sequence based on the length parameter
+    if length <= 0:  # base case
+        # if length is less than or equal to 0 then return an empty list to recursive function
+        return []
+    # init element with value equal to user input
+    element = int(input('Enter a number for List 2: '))
+    return [element] + listSecond(length - 1)  # recursive case
+    # wrap the [element] in braces to create a list object
+    # use the + operator to concatenate the list returned by the recursive case
+    # deduct 1 to our length to init a recursive step
 
 
 def menu():  # define a new user function named menu
@@ -166,4 +174,6 @@ def main():  # define a new user function named main
 
 
 # Start of the main program
-main()
+
+
+main()  # call the main() function to init the whole program
