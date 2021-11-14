@@ -34,6 +34,7 @@
                 required
                 oninvalid="this.setCustomValidity('Please State Your Name!')"
                 oninput="setCustomValidity('')"
+                placeholder="Your Name"
               />
               <!-- use the oninvalid event handler to say that the user did not put any name if the input returned invalid -->
               <!-- use the oninput event handler to remove the custom validity once the user placed an input -->
@@ -63,6 +64,7 @@
                 required
                 oninvalid="this.setCustomValidity('Invalid Phone Number Format! Please Use This Format (09XXXXXXXXX) With Exactly 11 Digits!')"
                 oninput="setCustomValidity('')"
+                placeholder="09XXXXXXXXX"
               />
               <!-- use the oninvalid event handler to say that the user did not put any name if the input returned invalid -->
               <!-- use the oninput event handler to remove the custom validity once the user placed an input -->
@@ -115,6 +117,20 @@
               <label for="yes">Yes</label>
               <input type="radio" name="shippingadd" id="no" />
               <label for="no">No</label>
+              <!-- use the oninvalid event handler to say that the user did not put any name if the input returned invalid -->
+              <!-- use the oninput event handler to remove the custom validity once the user placed an input -->
+            </div>
+
+            <!-- Container for Other Address -->
+            <div>
+              <label for="address">Address: </label><br />
+              <textarea
+                name="address"
+                id="address"
+                cols="50"
+                rows="5"
+                placeholder="Answer this if you have another shipping address"
+              ></textarea>
               <!-- use the oninvalid event handler to say that the user did not put any name if the input returned invalid -->
               <!-- use the oninput event handler to remove the custom validity once the user placed an input -->
             </div>
