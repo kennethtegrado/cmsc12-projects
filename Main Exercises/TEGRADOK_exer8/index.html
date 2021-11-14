@@ -81,6 +81,7 @@
                 required
                 oninvalid="this.setCustomValidity('Invalid Email! Try This Format (name@email.domain).')"
                 oninput="setCustomValidity('')"
+                placeholder="user@email.com"
               />
               <!-- use the oninvalid event handler to say that the user did not put any name if the input returned invalid -->
               <!-- use the oninput event handler to remove the custom validity once the user placed an input -->
@@ -97,6 +98,7 @@
                 required
                 oninvalid="this.setCustomValidity('Please State Your address!')"
                 oninput="setCustomValidity('')"
+                placeholder="State your address"
               ></textarea>
               <!-- use the oninvalid event handler to say that the user did not put any name if the input returned invalid -->
               <!-- use the oninput event handler to remove the custom validity once the user placed an input -->
@@ -160,7 +162,7 @@
                 oninvalid="this.setCustomValidity('Please State Your Mode Of Payment!')"
                 oninput="setCustomValidity('')"
               >
-                <option disabled selected value></option>
+                <option disabled selected value>Payment Options</option>
                 <option value="visa">Visa</option>
                 <option value="mastercard">Mastercard</option>
                 <option value="gcash">Gash</option>
@@ -194,7 +196,7 @@
             <div>
               <label for="styles">Bag Styles: </label>
               <select name="styles" id="styles">
-                <option disabled selected></option>
+                <option disabled selected>Styles</option>
                 <option value="satchel">Satchel</option>
                 <option value="folderpurse">Folder Purse</option>
                 <option value="backpackpurse">Backpack Purse</option>
@@ -221,9 +223,11 @@
                 id="quantity"
                 min="1"
                 max="10"
+                pattern="[0-9]{1,2}"
                 required
                 oninvalid="this.setCustomValidity('Invalid Quantity! Number of Items Should Be 1-10')"
                 oninput="setCustomValidity('')"
+                placeholder="Items"
               />
             </div>
             <input type="submit" />
