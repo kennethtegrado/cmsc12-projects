@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label> Is this the same as the shipping address? </label>
+        <br />
+        <input
+          type="radio"
+          name="shippingadd"
+          id="yes"
+          required
+          oninvalid="this.setCustomValidity('Please state if this address is the same with your shipping address!')"
+          oninput="setCustomValidity('')"
+        />
+        <label for="yes">Yes</label>
+        <input type="radio" name="shippingadd" id="no" />
+        <label for="no">No</label>
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

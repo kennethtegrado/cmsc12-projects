@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- Tell our browser that we want to use the latest version of HTML -->
+<html lang="en">
+  <!-- Tell our browser that we are using English in this html document -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Tell the browser that we are using the UTF-8 character encoding so thatt browser will know how to translate the code to readable human text -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell browser that page to be rendered using the version of IE11 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use this for controlling the responsiveness of the site -->
+    <title>Alpaca's Store | Order Form</title>
+    <!-- Tell the browser what the title in tab appear to be -->
+  </head>
+  <body>
+    <!-- Tell browser that this is the entirety of the page using the main semantic element-->
+    <main>
+      <!-- Tell browser that this section is the header of the page -->
+      <header>
+        <h1>Alpaca's Store</h1>
+      </header>
+      <section>
+        <form>
+          <!-- Fieldset to tell the browser that we want the form to have a Customer Details Section -->
+          <fieldset>
+            <!-- Set the legend to Customer Details -->
+            <legend>Customer Details</legend>
+            <!-- Container for Name -->
+            <div>
+              <label for="name">Name: </label>
+              <input
+                type="text"
+                id="name"
+                required
+                oninvalid="this.setCustomValidity('Please State Your Name!')"
+                oninput="setCustomValidity('')"
+              />
+              <!-- use the oninvalid event handler to say that the user did not put any name if the input returned invalid -->
+              <!-- use the oninput event handler to remove the custom validity once the user placed an input -->
+            </div>
+
+            <!-- Container for Birthday -->
+            <div>
+              <label for="bday">Birthday: </label>
+              <input
+                type="date"
+                id="bday"
+                required
+                oninvalid="this.setCustomValidity('Please State Your Birthday!')"
+                oninput="setCustomValidity('')"
+              />
+              <!-- use the oninvalid event handler to say that the user did not put any name if the input returned invalid -->
+              <!-- use the oninput event handler to remove the custom validity once the user placed an input -->
+            </div>
+
+            <!-- Container for Mobile Number -->
+            <div>
+              <label for="number">Mobile Number:</label>
+              <input
+                type="text"
+                pattern="[0][9][0-9]{9}"
+                id="number"
+                required
+                oninvalid="this.setCustomValidity('Invalid Phone Number Format! Please Use This Format (09XXXXXXXXX) With Exactly 11 Digits!')"
+                oninput="setCustomValidity('')"
+              />
+              <!-- use the oninvalid event handler to say that the user did not put any name if the input returned invalid -->
+              <!-- use the oninput event handler to remove the custom validity once the user placed an input -->
+            </div>
+
+            <!-- Container for Email Address -->
+            <div>
+              <label for="email"> Email Address: </label
+              ><input
+                type="email"
+                id="email"
+                name="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                required
+                oninvalid="this.setCustomValidity('Invalid Email! Try This Format (name@email.domain).')"
+                oninput="setCustomValidity('')"
+              />
+              <!-- use the oninvalid event handler to say that the user did not put any name if the input returned invalid -->
+              <!-- use the oninput event handler to remove the custom validity once the user placed an input -->
+            </div>
+
+            <!-- Container for Address -->
+            <div>
+              <label for="address">Address: </label><br />
+              <textarea
+                name="address"
+                id="address"
+                cols="50"
+                rows="5"
+                required
+                oninvalid="this.setCustomValidity('Please State Your address!')"
+                oninput="setCustomValidity('')"
+              ></textarea>
+              <!-- use the oninvalid event handler to say that the user did not put any name if the input returned invalid -->
+              <!-- use the oninput event handler to remove the custom validity once the user placed an input -->
+            </div>
+
+            <!-- Container for Radio Shipping Address -->
+            <div>
+              <label> Is this the same as the shipping address? </label>
+              <br />
+              <input
+                type="radio"
+                name="shippingadd"
+                id="yes"
+                required
+                oninvalid="this.setCustomValidity('Please State If This Address Is The Same With Your Shipping Address!')"
+                oninput="setCustomValidity('')"
+              />
+              <label for="yes">Yes</label>
+              <input type="radio" name="shippingadd" id="no" />
+              <label for="no">No</label>
+              <!-- use the oninvalid event handler to say that the user did not put any name if the input returned invalid -->
+              <!-- use the oninput event handler to remove the custom validity once the user placed an input -->
+            </div>
+
+            <!-- Container for Preferred Delivery Time -->
+            <div>
+              <label for="deliverytime">Preferred Delivery Time: </label>
+              <input
+                type="time"
+                id="deliverytime"
+                name="deliverytime"
+                required
+                oninvalid="this.setCustomValidity('Please State Your Preferred Delivery Time!')"
+                oninput="setCustomValidity('')"
+              />
+              <!-- use the oninvalid event handler to say that the user did not put any name if the input returned invalid -->
+              <!-- use the oninput event handler to remove the custom validity once the user placed an input -->
+            </div>
+
+            <!-- Container for Mode of Payment -->
+            <div>
+              <label for="payment">Mode of Payment: </label>
+              <select
+                name="payment"
+                id="payment"
+                required
+                oninvalid="this.setCustomValidity('Please State Your Mode Of Payment!')"
+                oninput="setCustomValidity('')"
+              >
+                <option disabled selected value></option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="gcash">Gash</option>
+                <option value="cash">Cash on Delivery</option>
+              </select>
+            </div>
+
+            <!-- Container for Courier Options -->
+          </fieldset>
+          <input type="submit" />
+          <input type="reset" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
