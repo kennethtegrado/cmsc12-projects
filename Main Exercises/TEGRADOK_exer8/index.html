@@ -195,6 +195,21 @@
               <label for="color">Bag Color: </label>
               <input type="color" />
             </div>
+
+            <!-- Container for quantity -->
+            <div>
+              <label for="quantity">Quantity: </label>
+              <input
+                type="number"
+                name="quantity"
+                id="quantity"
+                min="1"
+                max="10"
+                required
+                oninvalid="this.setCustomValidity('Invalid Quantity! Number of Items Should Be 1-10')"
+                oninput="setCustomValidity('')"
+              />
+            </div>
             <input type="submit" />
             <input type="reset" />
           </fieldset>
