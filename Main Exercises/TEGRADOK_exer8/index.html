@@ -153,9 +153,45 @@
             </div>
 
             <!-- Container for Courier Options -->
+            <div>
+              <label>Courier Options</label><br />
+              <input type="checkbox" name="jnt" id="jnt" />
+              <label for="jnt">JNT</label>
+              <br />
+              <input type="checkbox" name="ninja" id="ninja" />
+              <label for="ninja">Ninja Van</label>
+              <br />
+              <input type="checkbox" name="grab" id="grab" />
+              <label for="grab">Grab</label>
+              <br />
+              <input type="checkbox" name="toktok" id="toktok" />
+              <label for="toktok">TokTok</label>
+            </div>
           </fieldset>
-          <input type="submit" />
-          <input type="reset" />
+
+          <!-- Create a fieldset to tell browser to make a section for Order Details -->
+          <fieldset>
+            <!-- Show that this section is for Order Details via legend element -->
+            <legend>Order Details</legend>
+
+            <!-- Container for styles of bag -->
+            <div>
+              <label for="styles">Bag Styles: </label>
+              <select name="styles" id="styles">
+                <option disabled selected></option>
+                <option value="satchel">Satchel</option>
+                <option value="folderpurse">Folder Purse</option>
+                <option value="backpackpurse">Backpack Purse</option>
+                <option value="tote">Tote Bag</option>
+                <option value="duffel">Duffel</option>
+                <option value="bucketbag">Bucket Bag</option>
+                <option value="messengerbag">Messenger Bag</option>
+              </select>
+            </div>
+
+            <input type="submit" />
+            <input type="reset" />
+          </fieldset>
         </form>
       </section>
     </main>
