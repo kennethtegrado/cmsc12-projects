@@ -57,7 +57,16 @@ def vowelConsonantCounter(string): # define new user function named vowelConsona
     # use this function to count the total number of vowels and consonants in a string
     vowelCharacters = ['a','e','i','o','u']
     consonantCharacters = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
-    return
+    vowelCounter = 0
+    consonantCounter = 0
+    for character in string:
+        if character.isalpha():
+            lowercaseCharacter = character.lower()
+            if lowercaseCharacter in vowelCharacters:
+                vowelCounter += 1
+            else:
+                consonantCounter += 1
+    return vowelCounter,consonantCounter
 
 
 list = [2,4,11,6,3,9]
