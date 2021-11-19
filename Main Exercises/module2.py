@@ -38,7 +38,7 @@ def sumOfDigits(integer): # define new user function named sum
         the recursive steps
         '''
         return 0
-    return integer % 10 + sum(integer // 10) # recursive step
+    return integer % 10 + sumOfDigits(integer // 10) # recursive step
     '''
     This recursive step works by first isolating the last digit from the integer using the modulos operator and  floor division operator.
     The last digit of the integer is isolated then its value will be added to the next instance of the recursive step until we reach our
@@ -55,21 +55,28 @@ Number 3 - Task
 def vowelConsonantCounter(string): # define new user function named vowelConsonantCounter
     # set the parameter to string to explicitly tell our programmer that we are only accepting string as a parameter
     # use this function to count the total number of vowels and consonants in a string
-    vowelCharacters = ['a','e','i','o','u']
-    consonantCharacters = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
-    vowelCounter = 0
-    consonantCounter = 0
-    for character in string:
-        if character.isalpha():
-            lowercaseCharacter = character.lower()
-            if lowercaseCharacter in vowelCharacters:
-                vowelCounter += 1
-            else:
-                consonantCounter += 1
+    # init vowelCharacters to store all vowel characters to a list object
+    vowelCharacters = ['a','e','i','o','u'] 
+    vowelCounter = 0 # init vowelCounter and set value to 0, use this as counter
+    consonantCounter = 0 # init consonantCounter and set value to 0, use this as counter
+    for character in string: # iterate every characters on the string parameter
+        # use the isalpha() function to return a boolean whether the current iteration of character is an alphabet
+        if character.isalpha(): 
+            # if true then do this:
+            # use the lower() function to convert the current iteration of the string to lowerCase
+            lowercaseCharacter = character.lower() # init lowercaseCharacter to store the lowercase version of character
+            if lowercaseCharacter in vowelCharacters: # check if lowercaseCharacter is a vowel character
+                vowelCounter += 1 # add one whenever there's a vowel
+            else: # if lowercaseCharacter is not a vowel
+                consonantCounter += 1 # add one whenever character is not a vowel
     return vowelCounter,consonantCounter
+    # use the return method then send the value of vowelCounter and consonantCounter back to the main program
+    # note that by returning two variables without wrapping them on a literal automatically returns a tuple object back
+    # use this tuple for unparsing
 
 
 list = [2,4,11,6,3,9]
 
 print(oddList(list))
-print(sum(2478))
+print(sumOfDigits(25))
+print(vowelConsonantCounter("hello w0rld!"))
