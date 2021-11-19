@@ -79,4 +79,4 @@ list = [2,4,11,6,3,9]
 
 print(oddList(list))
 print(sumOfDigits(25))
-print(vowelConsonantCounter("hello w0rld!"))
+print(vowelConsonantCounter("c0MsaI"))
