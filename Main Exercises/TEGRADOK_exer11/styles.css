@@ -10,7 +10,7 @@
 
 /* Body styles */
 body {
-    height: 100vh;
+    margin: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,4 +20,71 @@ body {
         rgba(255, 209, 67, 1) 0%,
         rgba(255, 145, 83, 1) 90%
     );
+}
+
+/* Form Styles */
+form {
+    background: #fff6e5;
+    padding: 100px;
+    border-radius: 30px;
+    box-shadow: 0 0 50px 10px #e87332;
+}
+
+/* Headline Styles */
+h2 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 5rem;
+    color: #9f5913;
+}
+
+h3 {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+/* Button Styles */
+.btn-grad {
+    background-image: linear-gradient(
+        to right,
+        #ff8008 0%,
+        #ffc837 51%,
+        #ff8008 100%
+    );
+    cursor: pointer;
+}
+.btn-grad {
+    padding: 10px 50px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50px;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 700;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hidden Styles */
+.hidden {
+    display: none;
 }
