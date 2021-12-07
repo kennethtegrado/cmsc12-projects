@@ -53,13 +53,16 @@ const divisibleNumberGenerator = (randomArray, emptyArray) => {
         // Check if item is divisible by 3
         if (item % 3 === 0) emptyArray.push(item);
         // Check if item is an even number and not divisible by 4
-        if (item % 2 === 0 && item % 4 !== 0) emptyArray.push(item);
+        else if (item % 2 === 0 && item % 4 !== 0) emptyArray.push(item);
+        // Skip the iteration if it's not any of the iterations
+        else continue;
     }
 };
 
 // Call our Functions
 eightNumberGenerator(randomNumberArray);
 divisibleNumberGenerator(randomNumberArray, divisibleNumberArray);
+
 // Print our outputs to our console
 console.log(randomNumberArray);
 console.log(divisibleNumberArray);
