@@ -39,13 +39,14 @@ const vegetarianMode = () => {
 const noneMode = () => {
     // Change backgroundImage to Orange
     backgroundStyles.backgroundImage =
-        'radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 209, 67, 1) 0%, rgba(255, 145, 83, 1) 90%)';
+        'linear-gradient(to right, #ff512f 0%, #f09819 51%, #ff512f 100%)';
     // Change form styles
-    formStyles.background = '#ebf4ef';
-    titleStyles.color = '#062e18';
-    formStyles.boxShadow = '0 0 100px 10px #264635';
+    formStyles.background = '#fff6e5';
+    titleStyles.color = '#9f5913';
+    formStyles.boxShadow = '0 0 50px 10px #e87332';
     // Change button styles
-    buttonStyles.background = '#3abb77';
+    buttonStyles.backgroundImage =
+        'linear-gradient(to right,#ff512f 0%,#f09819 51%,#ff512f 100%)';
 };
 
 document.getElementsByName('dietaryRestrictions').forEach((selection) => {
@@ -56,5 +57,3 @@ document.getElementsByName('dietaryRestrictions').forEach((selection) => {
         if (choice === 'noRestriction') noneMode();
     });
 });
-
-// console.log(diet);
