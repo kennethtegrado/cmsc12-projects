@@ -31,6 +31,7 @@ let divisibleNumberArray = []; // declare an empty array using the array literal
 // Function to generate an array of eight random numbers
 const eightNumberGenerator = (emptyArray) => {
     // accept a parameter of emptyArray
+
     // Create a sequence of eight random numbers using the for loop then push those numbers to our randomNumberArray
     for (let i = 0; i < 8; i++) {
         // For every iteration of the loop, push the random number generated
@@ -42,10 +43,23 @@ const eightNumberGenerator = (emptyArray) => {
 };
 
 // Function to generate an array containing all divisiblenumbers
-const divisibleNumberGenerator = (randomArray, emptyArray) => {};
+const divisibleNumberGenerator = (randomArray, emptyArray) => {
+    // accept a parameter of randomArray and emptyArray
+
+    // Create a sequence of numbers that are divisible by 3 or even numbers that are not divisible by 4
+    // Check if current iteration of item is divisible by 3 or an even number that is not divisible by 4
+    // Use the ternary operator
+    for (const item of randomArray) {
+        // Check if item is divisible by 3
+        if (item % 3 === 0) emptyArray.push(item);
+        // Check if item is an even number and not divisible by 4
+        if (item % 2 === 0 && item % 4 !== 0) emptyArray.push(item);
+    }
+};
 
 // Call our Functions
 eightNumberGenerator(randomNumberArray);
-
+divisibleNumberGenerator(randomNumberArray, divisibleNumberArray);
 // Print our outputs to our console
 console.log(randomNumberArray);
+console.log(divisibleNumberArray);
