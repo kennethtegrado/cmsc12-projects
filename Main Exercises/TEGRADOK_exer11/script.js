@@ -42,6 +42,11 @@ const vegetarianMode = () => {
     // Change button styles
     buttonStyles.backgroundImage =
         'linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%)';
+
+    // removing meat options
+    inputs.forEach((input) => {
+        if (input.name === 'meat') input.classList.add('hidden');
+    });
 };
 
 // Changing to noneMode
@@ -72,6 +77,11 @@ const lowCarbMode = () => {
         'linear-gradient(to right, #4776E6 0%, #8E54E9  51%, #4776E6  100%)';
 };
 
+// Removing form resubmission
+function preventSubmission(e) {
+    e.preventDefault();
+}
+
 document.getElementsByName('dietaryRestrictions').forEach((selection) => {
     selection.addEventListener('click', () => {
         diet = selection.value;
@@ -80,3 +90,5 @@ document.getElementsByName('dietaryRestrictions').forEach((selection) => {
         if (diet === 'lowCarb') lowCarbMode();
     });
 });
+
+button.addEventListener('click', () => {});
