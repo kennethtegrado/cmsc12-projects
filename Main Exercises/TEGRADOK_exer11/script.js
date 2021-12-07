@@ -17,6 +17,9 @@ TEGRADO, Kenneth Renz A.
 let diet; // dietary restrictions
 let calories = 0; // calorie counter
 
+// button component
+const button = document.querySelector('button');
+
 // Variables for styling
 let backgroundStyles = document.querySelector('body').style;
 let formStyles = document.querySelector('form').style;
