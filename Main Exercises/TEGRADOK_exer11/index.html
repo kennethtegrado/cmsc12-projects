@@ -11,26 +11,54 @@
 
             <h3>Dietary restriction:</h3>
 
-            <input type="radio" />None <br /><input type="radio" />Vegetarian
-            <br /><input type="radio" />Low Carb
-
+            <input
+                type="radio"
+                name="dietaryRestrictions"
+                value="noRestriction"
+                required
+                class="radio"
+            />&nbsp None
             <br />
+            <input
+                type="radio"
+                name="dietaryRestrictions"
+                value="vegetarian"
+                class="radio"
+            />&nbsp Vegetarian
+            <br />
+            <input
+                type="radio"
+                name="dietaryRestrictions"
+                value="lowCarb"
+                class="radio"
+            />&nbsp Low Carb
 
             <h3>Food Items:</h3>
-            <input type="checkbox" />Plain Rice <br /><input
-                type="checkbox"
-            />Baked Potato <br /><input type="checkbox" />Toasted Bread
-            <br /><input type="checkbox" />Grilled Chicken <br /><input
-                type="checkbox"
-            />Braised Pork <br /><input type="checkbox" />Roast Beef
-            <br /><input type="checkbox" />Slow-cooked beans <br /><input
-                type="checkbox"
-            />Poached turnips <br /><input type="checkbox" />Glazed carrots
-            <br /><input type="checkbox" />Roasted Broccoli <br /><input
-                type="checkbox"
-            />Steamed Beans
+            <input type="checkbox" class="checkbox" />&nbsp Plain Rice
+            <br />
+            <input type="checkbox" class="checkbox" />&nbsp Baked Potato
+            <br />
+            <input type="checkbox" class="checkbox" />&nbsp Toasted Bread
+            <br />
+            <input type="checkbox" class="checkbox" />&nbsp Grilled Chicken
+            <br />
+            <input type="checkbox" class="checkbox" />&nbsp Braised Pork
+            <br />
+            <input type="checkbox" class="checkbox" />&nbsp Roast Beef
+            <br />
+            <input type="checkbox" class="checkbox" />&nbsp Slow-cooked beans
+            <br />
+            <input type="checkbox" class="checkbox" />&nbsp Poached turnips
+            <br />
+            <input type="checkbox" class="checkbox" />&nbsp Glazed carrots
+
+            <br />
+            <input type="checkbox" class="checkbox" />&nbsp Roasted Broccoli
+            <br />
+            <input type="checkbox" class="checkbox" />&nbsp Steamed Beans
             <br />
             <button type="submit" class="btn-grad">Submit</button>
         </form>
+        <script src="script.js"></script>
     </body>
 </html>

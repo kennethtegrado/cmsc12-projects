@@ -47,13 +47,19 @@ h3 {
     margin-top: 10px;
 }
 
+/* Input Styles */
+input {
+    margin-bottom: 15px;
+    font-size: large;
+}
+
 /* Button Styles */
 .btn-grad {
     background-image: linear-gradient(
         to right,
-        #ff8008 0%,
-        #ffc837 51%,
-        #ff8008 100%
+        #ff512f 0%,
+        #f09819 51%,
+        #ff512f 100%
     );
     cursor: pointer;
 }
@@ -62,7 +68,7 @@ h3 {
     margin-top: 20px;
     margin-right: auto;
     margin-left: auto;
-    border-radius: 50px;
+    border-radius: 60px;
     font-family: 'Poppins';
     text-transform: uppercase;
     text-align: center;
@@ -79,9 +85,9 @@ h3 {
 }
 
 .btn-grad:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
+    background-position: right center;
     text-decoration: none;
+    transform: scale(1.05);
 }
 
 /* Hidden Styles */
