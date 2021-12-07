@@ -1,0 +1,23 @@
+/* Remove default properties from the whole HTML */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap');
+
+/* Body styles */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    background-image: radial-gradient(
+        circle farthest-corner at 10% 20%,
+        rgba(255, 209, 67, 1) 0%,
+        rgba(255, 145, 83, 1) 90%
+    );
+}

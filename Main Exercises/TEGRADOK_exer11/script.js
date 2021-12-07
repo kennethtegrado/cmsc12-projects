@@ -9,3 +9,6 @@ Professor Aragones
 Submitted by:
 TEGRADO, Kenneth Renz A.
 */
+
+// USE STRICT MODE
+'use strict';
