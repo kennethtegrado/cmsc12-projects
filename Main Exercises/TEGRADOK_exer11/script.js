@@ -16,10 +16,13 @@ TEGRADO, Kenneth Renz A.
 // Global variables
 let diet; // dietary restrictions
 let calories = 0; // calorie counter
+let selectionCount = 0; // selection count
+const vegetables = []; //vegetables added
 
-// button component
+// button component and checkboxes
 const button = document.querySelector('button');
-
+const inputs = document.querySelectorAll('#checkbox');
+inputs.forEach((item) => console.log(item));
 // Variables for styling
 let backgroundStyles = document.querySelector('body').style;
 let formStyles = document.querySelector('form').style;
