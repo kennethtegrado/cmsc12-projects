@@ -90,7 +90,15 @@ form.addEventListener('submit', (event) => {
     // Iterate over all instances of the checkbox
     inputs.forEach((item) => {
         // Add one to our counter everytime that a checbox was clicked
-        if (item.checked) selectionCount++;
+        if (item.checked) {
+            selectionCount++;
+            // Add the values of the items checked to our calories
+            calories += item.value;
+            // Check the number of carbohydrates checked
+            if (item.name === 'carbo') carbohydratesCount++;
+            // Check the number of vegetables added
+            else if (item.name === 'vegetables') vegetables++;
+        }
     });
 
     // If the selection count is less than two then prevent form submission and display validation message
@@ -101,6 +109,10 @@ form.addEventListener('submit', (event) => {
         firstFood.setCustomValidity(
             'Please pick at least two food through the checkbox!'
         );
+    } else {
+        // Store calorie value
+        if (diet === 'lowCarb') {
+        }
     }
 });
 
