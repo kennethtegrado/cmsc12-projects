@@ -17,14 +17,15 @@ TEGRADO, Kenneth Renz A.
 let diet; // dietary restrictions
 let calories = 0; // calorie counter
 let selectionCount = 0; // selection count
-const vegetables = []; //vegetables added
+let carbohydratesCount = 0; // number of carbohydrates meal
+let vegetables = 0; //vegetables added
 
 // button component and checkboxes
-const button = document.querySelector('button');
-const inputs = document.querySelectorAll('input[type="checkbox"]');
-const labels = document.querySelectorAll('label');
-const meatContainer = document.querySelector('#meatContainer');
-const form = document.querySelector('form');
+const button = document.querySelector('button'); // accessing the button component
+const inputs = document.querySelectorAll('input[type="checkbox"]'); // variable for all the input instances of our checkboxes
+const meatContainer = document.querySelector('#meatContainer'); // variable for all items that are meat
+const firstFood = document.getElementById('firstFood'); // variable for accessing our first food checkbox for form validation
+const form = document.querySelector('form'); // variable for accessing our form
 
 // Variables for styling
 let backgroundStyles = document.querySelector('body').style;
@@ -91,7 +92,7 @@ form.addEventListener('submit', (event) => {
     });
     if (selectionCount < 2) {
         event.preventDefault();
-        inputs.setCustomValidity(
+        firstFood.setCustomValidity(
             'Please pick at least two food through the checkbox!'
         );
     }
@@ -105,5 +106,3 @@ document.getElementsByName('dietaryRestrictions').forEach((selection) => {
         if (diet === 'lowCarb') lowCarbMode();
     });
 });
-
-button.addEventListener('click', () => {});
