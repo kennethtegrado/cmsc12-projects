@@ -85,22 +85,32 @@ const lowCarbMode = () => {
     meatContainer.classList.remove('hidden');
 };
 
-// Removing form resubmission for errors
+// Form Submission with Validation
 form.addEventListener('submit', (event) => {
+    // Iterate over all instances of the checkbox
     inputs.forEach((item) => {
+        // Add one to our counter everytime that a checbox was clicked
         if (item.checked) selectionCount++;
     });
+
+    // If the selection count is less than two then prevent form submission and display validation message
     if (selectionCount < 2) {
+        // prevent form submission
         event.preventDefault();
+        // validity message
         firstFood.setCustomValidity(
             'Please pick at least two food through the checkbox!'
         );
     }
 });
 
+// Statement for updating our modes of planner
 document.getElementsByName('dietaryRestrictions').forEach((selection) => {
+    // for every instance of selection check if it was clicked
     selection.addEventListener('click', () => {
+        // store the value of the selection to our diet
         diet = selection.value;
+        // checked what selection is pressed by the user then set what mode is picked
         if (diet === 'vegetarian') vegetarianMode();
         if (diet === 'noRestriction') noneMode();
         if (diet === 'lowCarb') lowCarbMode();
