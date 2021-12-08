@@ -28,10 +28,10 @@ const firstFood = document.getElementById('firstFood'); // variable for accessin
 const form = document.querySelector('form'); // variable for accessing our form
 
 // Variables for styling
-let backgroundStyles = document.querySelector('body').style;
-let formStyles = document.querySelector('form').style;
-let titleStyles = document.querySelector('h2').style;
-let buttonStyles = document.querySelector('.btn-grad').style;
+let backgroundStyles = document.querySelector('body').style; // style for the background of the body
+let formStyles = document.querySelector('form').style; // style for the form itself
+let titleStyles = document.querySelector('h2').style; // style for the title Meal Planner
+let buttonStyles = document.querySelector('.btn-grad').style; // style for the buttons
 
 // Functions
 // Changing to vegetarianMode
