@@ -21,8 +21,11 @@ const vegetables = []; //vegetables added
 
 // button component and checkboxes
 const button = document.querySelector('button');
-const inputs = document.querySelectorAll('#checkbox');
+const inputs = document.querySelectorAll('input[type="checkbox"]');
+const labels = document.querySelectorAll('label');
+const meatContainer = document.querySelector('div');
 inputs.forEach((item) => console.log(item));
+
 // Variables for styling
 let backgroundStyles = document.querySelector('body').style;
 let formStyles = document.querySelector('form').style;
@@ -44,9 +47,7 @@ const vegetarianMode = () => {
         'linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%)';
 
     // removing meat options
-    inputs.forEach((input) => {
-        if (input.name === 'meat') input.classList.add('hidden');
-    });
+    meatContainer.classList.add('hidden');
 };
 
 // Changing to noneMode
@@ -61,6 +62,9 @@ const noneMode = () => {
     // Change button styles
     buttonStyles.backgroundImage =
         'linear-gradient(to right,#ff512f 0%,#f09819 51%,#ff512f 100%)';
+
+    // Bringing back meat options if it was removed
+    meatContainer.classList.remove('hidden');
 };
 
 // Changing to low carb dietary restriction
@@ -75,6 +79,9 @@ const lowCarbMode = () => {
     // Change button styles
     buttonStyles.backgroundImage =
         'linear-gradient(to right, #4776E6 0%, #8E54E9  51%, #4776E6  100%)';
+
+    // Bringing meat options if it was removed
+    meatContainer.classList.remove('hidden');
 };
 
 // Removing form resubmission
