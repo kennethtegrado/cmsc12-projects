@@ -93,7 +93,8 @@ form.addEventListener('submit', (event) => {
         if (item.checked) {
             selectionCount++;
             // Add the values of the items checked to our calories
-            calories += item.value;
+            // convert the value of the item to a number then add it to calories
+            calories += Number(item.value);
             // Check the number of carbohydrates checked
             if (item.name === 'carbo') carbohydratesCount++;
             // Check the number of vegetables added
