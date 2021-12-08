@@ -119,19 +119,23 @@ form.addEventListener('submit', (event) => {
         }
         // Check the number of vegetables selected
         if (vegetables < 2)
+            // Alert if the number of vegetables is less than two
             alert(
                 'Please choose at least 2 vegetables to have a healthy meal! It is recommended to do so!'
             );
         else {
+            // Check the number of calories
             if (calories > 750)
+                // Alert the user that they are eating too much if the meal is greater than 750 calories
                 alert(
                     `The user is eating too much! The total calorie count is ${calories} and is greater than the recommended amount for a single meal`
                 );
             else if (calories < 400)
+                // Alert the user that they are eating too little if the meal is less than 400 calories
                 alert(
                     `The user is eating too little! The total calorie count for this meal is ${calories} and is too little than the recommended amount for a single meal!`
                 );
-            else alert(`Total Calories Calculated For This Meal: ${calories}`);
+            else alert(`Total Calories Calculated For This Meal: ${calories}`); // alert the user the number of calories that they take
         }
     }
 });
