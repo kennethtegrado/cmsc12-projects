@@ -110,8 +110,28 @@ form.addEventListener('submit', (event) => {
             'Please pick at least two food through the checkbox!'
         );
     } else {
-        // Store calorie value
+        // check if the user is on Low Carb Mode
         if (diet === 'lowCarb') {
+            if (carbohydratesCount >= 2)
+                alert(
+                    'You have selected at least two foods with carbohydrates! Please choose your food again!'
+                );
+        }
+        // Check the number of vegetables selected
+        if (vegetables < 2)
+            alert(
+                'Please choose at least 2 vegetables to have a healthy meal! It is recommended to do so!'
+            );
+        else {
+            if (calories > 750)
+                alert(
+                    `The user is eating too much! The total calorie count is ${calories} and is greater than the recommended amount for a single meal`
+                );
+            else if (calories < 400)
+                alert(
+                    `The user is eating too little! The total calorie count for this meal is ${calories} and is too little than the recommended amount for a single meal!`
+                );
+            else alert(`Total Calories Calculated For This Meal: ${calories}`);
         }
     }
 });
