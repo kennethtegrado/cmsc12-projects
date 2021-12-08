@@ -23,8 +23,8 @@ const vegetables = []; //vegetables added
 const button = document.querySelector('button');
 const inputs = document.querySelectorAll('input[type="checkbox"]');
 const labels = document.querySelectorAll('label');
-const meatContainer = document.querySelector('div');
-inputs.forEach((item) => console.log(item));
+const meatContainer = document.querySelector('#meatContainer');
+const form = document.querySelector('form');
 
 // Variables for styling
 let backgroundStyles = document.querySelector('body').style;
@@ -84,10 +84,18 @@ const lowCarbMode = () => {
     meatContainer.classList.remove('hidden');
 };
 
-// Removing form resubmission
-function preventSubmission(e) {
-    e.preventDefault();
-}
+// Removing form resubmission for errors
+form.addEventListener('submit', (event) => {
+    inputs.forEach((item) => {
+        if (item.checked) selectionCount++;
+    });
+    if (selectionCount < 2) {
+        event.preventDefault();
+        inputs.setCustomValidity(
+            'Please pick at least two food through the checkbox!'
+        );
+    }
+});
 
 document.getElementsByName('dietaryRestrictions').forEach((selection) => {
     selection.addEventListener('click', () => {

@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <form onsubmit="preventSubmission()">
+        <form>
             <h2>Meal planner</h2>
 
             <h3>Dietary restriction:</h3>
@@ -34,98 +34,100 @@
             />&nbsp Low Carb
 
             <h3>Food Items:</h3>
-            <input
-                type="checkbox"
-                class="checkbox"
-                id="checkbox"
-                value="204"
-                name="carbo"
-            />&nbsp Plain Rice
-            <br />
-            <input
-                type="checkbox"
-                class="checkbox"
-                id="checkbox"
-                value="194"
-                name="vegetables"
-            />&nbsp Baked Potato
-            <br />
-            <input
-                type="checkbox"
-                class="checkbox"
-                id="checkbox"
-                value="140"
-                name="carbo"
-            />&nbsp Toasted Bread
-            <br />
-            <div name="meatContainer" class="">
+            <div class="checboxes">
                 <input
                     type="checkbox"
                     class="checkbox"
-                    id="chicken"
-                    value="147"
-                    name="meat"
-                />
-                &nbsp Grilled Chicken
+                    id="checkbox"
+                    value="204"
+                    name="carbo"
+                />&nbsp Plain Rice
                 <br />
                 <input
                     type="checkbox"
                     class="checkbox"
-                    id="pork"
-                    value="260"
-                    name="meat"
-                />&nbsp Braised Pork
+                    id="checkbox"
+                    value="194"
+                    name="vegetables"
+                />&nbsp Baked Potato
                 <br />
                 <input
                     type="checkbox"
                     class="checkbox"
-                    id="beef"
-                    value="282"
-                    name="meat"
-                />&nbsp Roast Beef
+                    id="checkbox"
+                    value="140"
+                    name="carbo"
+                />&nbsp Toasted Bread
+                <br />
+                <div id="meatContainer" class="">
+                    <input
+                        type="checkbox"
+                        class="checkbox"
+                        id="chicken"
+                        value="147"
+                        name="meat"
+                    />
+                    &nbsp Grilled Chicken
+                    <br />
+                    <input
+                        type="checkbox"
+                        class="checkbox"
+                        id="pork"
+                        value="260"
+                        name="meat"
+                    />&nbsp Braised Pork
+                    <br />
+                    <input
+                        type="checkbox"
+                        class="checkbox"
+                        id="beef"
+                        value="282"
+                        name="meat"
+                    />&nbsp Roast Beef
+                    <br />
+                </div>
+                <input
+                    type="checkbox"
+                    class="checkbox"
+                    id="checkbox"
+                    value="124"
+                    name="vegetables"
+                />&nbsp Slow-cooked beans
+                <br />
+                <input
+                    type="checkbox"
+                    class="checkbox"
+                    id="checkbox"
+                    value="135"
+                    name="vegetables"
+                />&nbsp Poached turnips
+                <br />
+                <input
+                    type="checkbox"
+                    class="checkbox"
+                    id="checkbox"
+                    value="150"
+                    name="vegetables"
+                />&nbsp Glazed carrots
+
+                <br />
+                <input
+                    type="checkbox"
+                    class="checkbox"
+                    id="checkbox"
+                    value="90"
+                    name="vegetables"
+                />&nbsp Roasted Broccoli
+                <br />
+                <input
+                    type="checkbox"
+                    class="checkbox"
+                    id="checkbox"
+                    value="70"
+                    name="vegetables"
+                />&nbsp Steamed Beans
                 <br />
             </div>
-            <input
-                type="checkbox"
-                class="checkbox"
-                id="checkbox"
-                value="124"
-                name="vegetables"
-            />&nbsp Slow-cooked beans
-            <br />
-            <input
-                type="checkbox"
-                class="checkbox"
-                id="checkbox"
-                value="135"
-                name="vegetables"
-            />&nbsp Poached turnips
-            <br />
-            <input
-                type="checkbox"
-                class="checkbox"
-                id="checkbox"
-                value="150"
-                name="vegetables"
-            />&nbsp Glazed carrots
-
-            <br />
-            <input
-                type="checkbox"
-                class="checkbox"
-                id="checkbox"
-                value="90"
-                name="vegetables"
-            />&nbsp Roasted Broccoli
-            <br />
-            <input
-                type="checkbox"
-                class="checkbox"
-                id="checkbox"
-                value="70"
-                name="vegetables"
-            />&nbsp Steamed Beans
-            <br />
             <button type="submit" class="btn-grad">Submit</button>
         </form>
         <script src="script.js"></script>
