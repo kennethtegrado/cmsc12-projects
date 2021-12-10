@@ -102,7 +102,7 @@ form.addEventListener('submit', (event) => {
             // Check the number of carbohydrates checked
             if (item.classList.contains('carbo')) carbohydratesCount++;
             // Check the number of vegetables added
-            else if (item.classList.contains('vegetables')) vegetables++;
+            if (item.classList.contains('vegetables')) vegetables++;
         }
     });
 
