@@ -119,14 +119,14 @@ form.addEventListener('submit', (event) => {
         if (diet === 'lowCarb') {
             if (carbohydratesCount >= 2)
                 alert(
-                    'You have selected at least two foods with carbohydrates! Please choose your food again!'
+                    `You have selected ${carbohydratesCount} foods with carbohydrates! Please choose your food again!`
                 );
         }
         // Check the number of vegetables selected
         if (vegetables < 2)
             // Alert if the number of vegetables is less than two
             alert(
-                'Please choose at least 2 vegetables to have a healthy meal! It is recommended to do so!'
+                `You picked ${vegetables} vegetables for your meal! Please choose at least 2 vegetables to have a healthy meal! It is recommended to do so!`
             );
         else {
             // Check the number of calories
