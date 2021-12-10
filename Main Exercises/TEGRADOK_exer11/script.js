@@ -49,6 +49,10 @@ const vegetarianMode = () => {
 
     // removing meat options
     meatContainer.classList.add('hidden');
+    // disable all items that are in the meat category to remove hidden bugs
+    inputs.forEach((item) => {
+        if (item.classList.contains('meat')) item.disabled = true;
+    });
 };
 
 // Changing to noneMode
